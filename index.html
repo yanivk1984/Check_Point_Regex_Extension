@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Point Regular Expression Search</title>
+    <script src="resources/js/jQuery.js"></script>
+    <script src="resources/js/popper.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <script src="resources/js/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/index.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">
+</head>
+
+<body onload="getTotal('hosts')" >
+<div class="top-bar">
+    <h3>Check Point Regular Expression Search</h3>
+</div>
+
+<div id="search">
+    <!-- Object Name Section -->
+    <div>
+        <label for="basic-url">Search Your Favorite Object</label>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Object Name</span>
+            </div>
+            <input name="name" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" >
+        </div>
+        <!--        object name end-->
+
+        <!--        object type dropdown-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Object Type</span>
+            </div>
+
+            <div class="dropdown">
+                <button name="type" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Hosts
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a  onclick="changeLabel(this.innerHTML)" class="dropdown-item" href="#">Hosts</a>
+                    <a onclick="changeLabel(this.innerHTML)" class="dropdown-item" href="#">Networks</a>
+                    <a onclick="changeLabel(this.innerHTML)" class="dropdown-item" href="#">Groups</a>
+                </div>
+            </div>
+        </div>
+        <!-- object type dropdown end -->
+
+        <!-- type of search-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Search Configuration</span>
+            </div>
+            <div class="input-group-text">
+                <input name="searchType" id="Contains" type="radio" aria-label="Radio button for following text input" checked> Contains
+                <input name="searchType" id="Regex" type="radio" aria-label="Radio button for following text input"> Regex
+                <input name="searchType" id="Full Match" type="radio" aria-label="Radio button for following text input"> Full Match
+                <input name="searchType" id="Start With" type="radio" aria-label="Radio button for following text input"> Start With
+                <input name="searchType" id="End With" type="radio" aria-label="Radio button for following text input"> End With
+                <input name="caseSensitive" type="checkbox" aria-label="Checkbox for following text input"> Case Sensitive
+            </div>
+        </div>
+        <button type="button" onclick="onSubmit()" class="btn btn-secondary">Submit</button>
+    </div>
+    <br>
+
+    <table style="display: none" class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Object Name</th>
+            <th scope="col">Object Type</th>
+            <th scope="col">IP-Address</th>
+            <th scope="col">In Group</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

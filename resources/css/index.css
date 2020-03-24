@@ -1,0 +1,55 @@
+.top-bar {
+    background: #E65684;
+    height: 50px;
+    align-items: center;
+    border: black solid 1px;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+h3 {
+    position: relative;
+    margin-top: 20px !important;
+    margin-left: 10px !important;
+    bottom: auto !important;
+    color: white !important;
+    font-size: 20px !important;
+}
+
+#search {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+input {
+    width: auto !important;
+}
+
+#basic-url {
+    flex: unset;
+}
+
+.dropdown-menu {
+    background-color: #FFC0CB !important;
+}
+
+.dropdown-item {
+    background-color: #FFC0CB !important;
+}
+
+input[type="radio"] {
+    margin-left: 20px;
+}
+
+input[type="checkbox"] {
+    margin-left: 25px;
+}
+
+.btn-secondary {
+    width: 200px;
+}
+

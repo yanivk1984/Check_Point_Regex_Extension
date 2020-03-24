@@ -1,0 +1,31 @@
+{
+    "extension": {
+      "name": "Regular Expression Search",
+      "product-url": "https://yanivk1984.github.io/Check_Point_Regex_Extension/",
+      "provider": "extensions@checkpoint.com",
+      "version": "1.0",
+      "extension-version-requirements": {
+        "minimum-version": "1.2"
+      }
+    },
+    "locations": [
+      {
+        "location": "details-pane",
+        "relevant-types": ["gateways"],
+        "ui-element": {
+          "type": "tab",
+          "caption": "Regular Expression Search",
+          "tooltip": "Perform Regular Expression Search on Check Point SmartConsole",
+          "action": {
+            "details-level": "full",
+            "method": "get",
+            "trigger-id": "gateways-details-pane",
+            "url": "https://yanivk1984.github.io/Check_Point_Regex_Extension/index.html"
+          }
+        }
+      }
+    ],
+    "requested-permissions": {
+		"client": ["run-read-only-commands"]
+	}
+}
